@@ -1,0 +1,155 @@
+---
+title: "Height Weight Model"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+- next step: actually go through chapter for this 
+
+
+## Process
+
+1. State a clear question
+2. Sketch your casual assumptions
+3. Use the sketch to define a generative model
+4. Use the generative model to build and estimator 
+
+```{r}
+library(rethinking)
+data(Howell1)
+```
+
+### Scientific Question
+
+Describe the association between adult weight and height. 
+
+```{r}
+d <- Howell1[Howell1$age>= 18,]
+```
+
+
+### State Causal Assumptions 
+
+```{r}
+library(ggdag)
+library(dagitty)
+library(ggplot2)
+theme_set(theme_dag())
+
+dag <- dagitty("dag{H -> W <- U}")
+
+ggdag(dag, layout = "circle") +
+  labs(title = "Height causes Weight + Unobserved Error")
+
+```
+
+### Make Generative Model 
+
+```{r}
+
+sim_weight <- function(H, b, sd){
+  U <- rnorm(length(H), 0, sd)
+  W <- b*H + U
+  return(W)
+}
+H <- runif(200, min = 130, max = 170)
+W <- sim_weight(H, b = 0.5, sd = 5)
+plot(W ~ H, col = 2, lwd = 3)
+
+```
+
+### Approxmiate
+
+```{r}
+m3.1 <- quap(
+  alist(
+    W ~ dnorm(mu,sigma),
+    mu <- a + b*H,
+    a ~ dnorm(0,10),
+    b ~ dunif(0,1),
+    sigma ~ dunif(0,10)
+  ) , data=list(W=W, H=H)
+  )
+
+n <- 1e3
+a <- rnorm(n, 0, 10)
+b <- runif(n, 0, 1)
+plot(NULL, xlim=c(130,170), ylim = c(50,90),
+                xlab = "height", ylab = "weight")
+for (j in 1:50) abline(a = a[j], b=b[j], lwd = 2, col = 2)
+
+precis(m3.1)
+
+post <- extract.samples(m3.1)
+
+head(post)
+
+rethinking::stancode(m3.1)
+
+```
+
+### Re-Build with Stan 
+
+From [Stan User Guide](https://mc-stan.org/docs/stan-users-guide/linear-regression.html) 
+
+```{r}
+library(cmdstanr)
+
+m3.1_model <- 
+   cmdstan_model(
+  "templates/rethinking/cont_IV_DV.stan",
+    cpp_options = list(stan_threads = TRUE)
+  )
+
+kung_list = list(
+  N = length(W),
+  w=W,
+  h=H)
+
+m3.1_stan <-
+  m3.1_model$sample(
+    data =
+      list(
+        N = length(W),
+        w = W, 
+        h = H
+      ),
+    chains = 4,
+    parallel_chains = 4,
+    threads_per_chain = 2,
+    ### Slow and reliable
+    # adapt_delta = 0.95,
+    iter_warmup = 1000,
+    iter_sampling = 1000,
+    refresh = 50
+    ### (Relatively) quick and dirty
+    ##iter_warmup = 500,
+    ##iter_sampling = 500,
+    ## refresh = 25
+  )
+
+
+
+```
+
+
+### Rethinking checks but with stan 
+
+```{r}
+m3.1
+
+m3.1_stan
+
+
+
+model_1_fit$summary(c("variant_difficulties", "person_abilities", "item_difficulties","location_severities")) |>
+  select(variable, mean, median, q5,q95, rhat) |>
+  print(n = Inf)
+
+
+```
+
+
+
