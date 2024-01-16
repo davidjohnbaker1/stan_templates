@@ -54,9 +54,33 @@ sim_weight <- function(H, b, sd){
   W <- b*H + U
   return(W)
 }
+
 H <- runif(200, min = 130, max = 170)
 W <- sim_weight(H, b = 0.5, sd = 5)
 plot(W ~ H, col = 2, lwd = 3)
+
+## Test 
+
+m3.1_stan <- m3.1_stan$sample(
+    data =
+      list(
+        N = length(W),
+        w = W, 
+        h = H
+      ),
+    chains = 4,
+    parallel_chains = 4,
+    threads_per_chain = 2,
+    ### Slow and reliable
+    # adapt_delta = 0.95,
+    iter_warmup = 1000,
+    iter_sampling = 1000,
+    refresh = 50
+    ### (Relatively) quick and dirty
+    ##iter_warmup = 500,
+    ##iter_sampling = 500,
+    ## refresh = 25
+  )
 
 ```
 
@@ -131,6 +155,18 @@ m3.1_stan <-
   )
 
 
+# library("bayesplot")
+# library("rstanarm")
+# library("ggplot2")
+# 
+# fit <- stan_glm(mpg ~ ., data = mtcars)
+# posterior <- as.matrix(fit)
+# 
+# plot_title <- ggtitle("Posterior distributions",
+#                       "with medians and 80% intervals")
+# mcmc_areas(posterior,
+#            pars = c("cyl", "drat", "am", "wt"),
+#            prob = 0.8) + plot_title
 
 ```
 
