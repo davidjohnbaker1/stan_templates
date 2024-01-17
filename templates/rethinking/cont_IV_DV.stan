@@ -9,7 +9,7 @@ data {
 parameters{
   real alpha;
   real<lower=0,upper=1> beta;
-  real<lower=0,upper=10> sigma;
+  real<lower=0,upper=5> sigma;
 }
 
 // McElreath Output

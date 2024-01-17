@@ -17,13 +17,19 @@ editor_options:
 4. Use the generative model to build and estimator 
 
 ```{r}
+library(ggdag)
+library(dagitty)
+library(ggplot2)
+library(cmdstanr)
 library(rethinking)
+library(bayesplot)
+theme_set(theme_dag())
 data(Howell1)
 ```
 
 ### Scientific Question
 
-Describe the association between adult weight and height. 
+Describe the association between adult weight and height using a linear model
 
 ```{r}
 d <- Howell1[Howell1$age>= 18,]
@@ -32,55 +38,93 @@ d <- Howell1[Howell1$age>= 18,]
 
 ### State Causal Assumptions 
 
-```{r}
-library(ggdag)
-library(dagitty)
-library(ggplot2)
-theme_set(theme_dag())
+We assume that height causes weight.
+Weight cannot cause height.
+There is also unobserved influnce on weight not from height. 
 
+```{r}
 dag <- dagitty("dag{H -> W <- U}")
 
 ggdag(dag, layout = "circle") +
   labs(title = "Height causes Weight + Unobserved Error")
-
 ```
 
 ### Make Generative Model 
 
+1. Use R to make data and visually check it  
+2. Feed that data to Stan
+3. Summerise the data 
+
 ```{r}
+# With R Code 
 
-sim_weight <- function(H, b, sd){
-  U <- rnorm(length(H), 0, sd)
-  W <- b*H + U
-  return(W)
-}
+# how many people? 
+n_samples <- 200
+# make heights, sample with set range
+adult_heights <- runif(n_samples, min = 130, max = 170)
+# add in noise via the U variable
+# jiggles values in sample to have SD of 5
+U <- rnorm(n_samples, 0, sd = 5)
+# causally create values of weight via linear construction 
+# b is how much to multiply heights by to get weight 
+b <- 0.5
+adult_weights <- b*adult_heights + U
 
-H <- runif(200, min = 130, max = 170)
-W <- sim_weight(H, b = 0.5, sd = 5)
-plot(W ~ H, col = 2, lwd = 3)
+simulated_hw_data <- list(
+  N_Samples = n_samples,
+  Weights = adult_weights,
+  Heights = adult_heights
+)
 
-## Test 
+simulated_hw_data
 
-m3.1_stan <- m3.1_stan$sample(
-    data =
-      list(
-        N = length(W),
-        w = W, 
-        h = H
-      ),
+# could wrap this in a function 
+
+# Visually check this makes sense 
+plot(adult_weights ~ adult_heights, col = 2, lwd = 3)
+
+# Simulate data from prior using estimator 
+
+height_weight_stan <- 
+   cmdstan_model(
+  "templates/rethinking/cont_IV_DV.stan",
+    cpp_options = list(stan_threads = TRUE)
+  )
+
+
+pp_hw_model <- height_weight_stan$sample(
+  data = 
+    list(
+      N = simulated_hw_data$N_Samples,
+      w = simulated_hw_data$Weights,
+      h = simulated_hw_data$Heights
+    ),
     chains = 4,
     parallel_chains = 4,
     threads_per_chain = 2,
-    ### Slow and reliable
-    # adapt_delta = 0.95,
+    adapt_delta = 0.95,
     iter_warmup = 1000,
     iter_sampling = 1000,
     refresh = 50
-    ### (Relatively) quick and dirty
-    ##iter_warmup = 500,
-    ##iter_sampling = 500,
-    ## refresh = 25
-  )
+)
+
+
+# Possible values 
+pp_hw_model$summary(c("alpha","beta","sigma")) |>
+  dplyr::select(variable, mean, median, q5,q95, rhat) |>
+  print(n = Inf)
+
+pp_hw_model$draws()
+
+mcmc_areas(
+  as.matrix(
+    pp_hw_model$draws(format = "matrix")
+    ),
+           pars = c("beta","sigma"),
+           prob = 0.8)
+
+
+
 
 ```
 
@@ -119,13 +163,6 @@ rethinking::stancode(m3.1)
 From [Stan User Guide](https://mc-stan.org/docs/stan-users-guide/linear-regression.html) 
 
 ```{r}
-library(cmdstanr)
-
-m3.1_model <- 
-   cmdstan_model(
-  "templates/rethinking/cont_IV_DV.stan",
-    cpp_options = list(stan_threads = TRUE)
-  )
 
 kung_list = list(
   N = length(W),
@@ -180,9 +217,6 @@ m3.1_stan
 
 
 
-model_1_fit$summary(c("variant_difficulties", "person_abilities", "item_difficulties","location_severities")) |>
-  select(variable, mean, median, q5,q95, rhat) |>
-  print(n = Inf)
 
 
 ```
