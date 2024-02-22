@@ -1,0 +1,286 @@
+---
+title: "Cutpoint Modeling"
+format: html
+editor: visual
+editor_options: 
+  chunk_output_type: console
+---
+
+## Drafting 
+
+there is no clear demarcation in the BMRQ distribution corresponding to anhedonia, meaning that sensitivity to musical reward is a continuum in the population.”
+(From perception to pleasure. Zatorre. 2023).
+
+
+
+- [Mas Her 2014](https://www.cell.com/current-biology/fulltext/S0960-9822(14)00133-X?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS096098221400133X%3Fshowall%3Dtrue#supplementaryMaterial)
+- [Mas Her 2018](https://pdf.sciencedirectassets.com/273019/1-s2.0-S0079612318X00028/1-s2.0-S0079612318300177/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjECsaCXVzLWVhc3QtMSJHMEUCIQD20RybUtBp84V1fHZyccuxQRWOGJSNaEVSPxqWyRlh5QIgevfE2mhKxhIPjTstaaHRsm0qtDX9XlgFeuxEqn1TYrYquwUI1P%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FARAFGgwwNTkwMDM1NDY4NjUiDAYbKQw089wvTe6P0SqPBaFuEUfixwIORZI5XugUyl9duLWUsPzofkoXpZLpqKusA1lWIob%2FSbCoKM2XUuUostZS2i1wJkPNmyw%2FttDtwZoeGcZlf6NQWqr%2BZ%2FLdTz8VbhIlH0O6dGbOZSZ%2BArLJLTzF5dh2WILYg2uRrnmJhgYTfju7xKp%2F%2Bd0QfShqcQs6%2FFySq6lBQjq%2BNM0Lfu4bNcGyoX8GJHZ5rjpdJVM7rKDdNNnTLNC4IBNg%2FSZdJSDvcPL5wpWser73Nla8FPCILca7vpnlLaam2bvkcN2kyqtta29b0nceYb5CwHRwO3J5EKuRVLzpNUDoRCedelrOZZj%2FnuVoQsTMJPXGf3ejDY4WMtCasKlImxWWkfORB9u4Jl3vHxxbIR3MwWWo7O84cvyOhoZxMsqG2ljCYCqtht9Y7IyXdi0jbcRdmQ6H0qzYs%2BD9FaIdDEDmxPaMUVdPLEBQ59y0hNNW0YxShQB38Btnw9%2BPiRQaywOKqJFHC5aFTJl8aBCC4m6TA5FFSDeQtjRoA6KXH2LrWH3b6A8I63rBIwtuNzXs%2Fz%2FMyIRhI70caENIo6rkyfrLc8UEg52m6EszKpxpRlC7AbwDzpfOUJvN9e0cZbTBGmMjyd4O9Qkdk3%2Fy47VGQd%2Fb7%2FdRE%2F7DaQ717p%2F32VodMUwMyoD86xeHgPFkmTzq2bkz0W8ANy%2FxnoSi20sQ7N6iMhR51an9R30guXrvT%2BVBDq4sD%2FQ1evb0QJUHO6BNRkLBXO8HjXHjwYb9KJwgEG379%2BkAMs0klNddpF%2FsPskYMcEFqpCZtDn79mAeZB97LTcdBYO2HoKyiFFnYogoca5NALGReaWIyVDjHdrZlMtghFRmnkmvBDTQxkTSRQ%2BP%2FtfccpDMO8YwgPmjrQY6sQHHMljL4WzwtJ%2B8TtTGH%2B2WZvPGNZd2T3xWdj%2BsPBq9laXcghPo46WEbSDg9tc60vQbUWoL3iRH0NRjz0%2FPPMi87lzqWTpohMQ1IGaL6AIkMrenP1Bnrp%2BOzVmzvSdzKr3prr9M0%2BMrbZO1RGZ%2BehhwxysQq1RvgbjUzQOcoKsdmp%2B%2B0VagVu6lAJYasbN%2BgPDcdSW8k%2FV7mf%2FJXkavvfdq%2FiUJenZuJxqWl%2BOZSLgzclM%3D&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20240118T111727Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAQ3PHCVTY3VXNKTYK%2F20240118%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=56f3250da4775aadf6d5e48320a8dfff8407d0d21f02ad2079a2af5e55855129&hash=5de7ce1a4a804e20022a5d3c3a8d35f12141ac9f86b0a91768a4d161cfb7edee&host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&pii=S0079612318300177&tid=spdf-23b566e9-1de4-42a6-a9e3-a3d8c631e3b3&sid=ca4de142607ec84a91-9ed8-e8094b8d2c55gxrqb&type=client&tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&ua=05015d555157500b5b&rr=84766e806a314188&cc=gb)
+
+
+
+
+- musical anhedonia and hyperdonia : the need for psychometric measurment , construct or statistical artefact? 
+
+- musical anhedonia is condition where individuals do not find music pleasurable 
+- perception abilities are fine, but blunted for music specific 
+- mas-herro musical cell first do this 
+- mas-herro make this claim where they do and find 
+- kaithos also follow up on this where futher claim showing should see effect only with pleasing, not displeasing 
+- (louis and belfi paper as well)
+- in all three papers defined by use BMRQ and PAS to define this with other instruments 
+- all papers report descriptives, but dont have lack of correlation between two
+- [contact authors, able to get correlcaitons between the two?]
+- causal model is that two tools CAUSE A, which then leads to specific effects on the DV 
+- A is used as IV, with or without others? 
+- Problem is that A has information that is unable to be disentangled from either PAS or eBMRQ unless added
+- would not even make sense to include PAS or eBMRQ in model, but would be better modeling choice bc then can estimate where effect is coming from 
+- esp if consider degree of correlation in the data orginally 
+- main points are
+- theoretically good that maybe they are not correlated, but they should be? 
+
+
+
+## Process
+
+1. State a clear question
+2. Sketch your casual assumptions
+3. Use the sketch to define a generative model
+4. Use the generative model to build and estimator 
+
+
+```{r}
+library(ggdag)
+library(dagitty)
+library(ggplot2)
+library(cmdstanr)
+library(rethinking)
+library(bayesplot)
+theme_set(theme_dag())
+```
+
+### Scientific Question
+
+What does posterior look like if you stratify your IV using two relative cutpoints, then regress onto condition where there is true effect?
+Describe the association between adult weight and height using a linear model
+
+### State Causal Assumptions 
+
+- Variables: DV- Plesantness rating, IV- anhedonianess, IV, type of stimuli (please displease)
+- know that total eBMRQ squore and PAS score without auditory items are correlated 
+
+- P: DV, pleasentness 
+- A: IV, anhedonianess (unobserved, continuous, could be binarized, try for hyperhedonized)
+- S: IV, stimuli type (displeasing or displeasing)
+- AS: IV, Anhedonia no audio (observed)
+- MR: IV, Musical reward (observed)
+
+```{r}
+
+dag <- dagitty("dag{A -> P <- S; U -> P; MR -> A; AS -> A}")
+
+ggdag(dag, layout = "circle") +
+  labs(title = "Causual Structure for Anhedonia Modeling") 
+  
+```
+
+### Sketch Causal Model 
+
+```{r}
+library(tidyverse)
+# dont model with normal!  Let's just assume normal for now 
+
+# use gamma distribution since will skew positive, assume most people are near clump, with big tail ??
+
+n_samples <- 10000
+
+k_cor2 <- read.csv("data/kaithos_2024.csv", header = FALSE)
+
+names(k_cor2) <- c("PAS", "eBMRQ")
+
+# empirically reported values 
+eBMRQ_mean <- 91.32
+eBMRQ_sd <- 21.84
+PAS_mean <- 9.86
+PAS_sd <- 2.53
+eBMRQ_PAS_cc <- -0.435
+
+covariance <- eBMRQ_PAS_cc * eBMRQ_sd * PAS_sd
+
+# plot empirical distributions if standrdized
+
+covariance
+
+Sigma <- matrix(c(eBMRQ_sd^2, covariance, covariance, PAS_sd^2), nrow = 2)
+
+xy <- MASS::mvrnorm(n = n_samples, mu = c(eBMRQ_mean, PAS_mean), Sigma = Sigma)
+
+colnames(xy) <- c("PAS", "eBMRQ")
+
+kath_dat <- data.frame(xy) |> as_tibble()
+
+kath_dat
+
+hist(k_cor2$PAS)
+hist(k_cor2$eBMRQ)
+
+hist(kath_dat$PAS)
+hist(kath_dat$eBMRQ)
+
+# have two varaibles with apprx relationship, but distributions are not totally understood given normal and bounds 
+
+# bascially have some sort of moderation effect 
+# try it first just with simple model where can see differences in P 
+
+
+# dont forget noise 
+
+
+with(kath_dat, plot(PASz, eBMRQz))
+
+kath_dat$unobserved <- rnorm(n_samples, mean = 0, sd = 3)
+
+
+# first figure out composite 
+
+# anhedonics - less than on sd on PAS, below tenth percentile on BRMQ
+
+pas_cutpoint <- -.5
+bmrq_cutpoint  <- -.5
+
+kath_dat$PASz <- (kath_dat$PAS - mean(kath_dat$PAS)) / sd(kath_dat$PAS)
+
+kath_dat$eBMRQz <- (kath_dat$eBMRQ - mean(kath_dat$eBMRQ)) / sd(kath_dat$eBMRQ)
+
+kath_dat |>
+  summarise(min_val = min(PASz))
+
+
+kath_dat <- kath_dat |>
+  mutate(anhed = case_when(
+    PASz < pas_cutpoint & eBMRQz < bmrq_cutpoint ~ "Anhedonic",
+    .default = "normal"
+  ))
+
+
+kath_dat |>
+  ggplot(aes(x = PASz, y = eBMRQz, color = anhed)) +
+  geom_point() +
+  theme_minimal() +
+  geom_smooth(method = "lm")
+
+kath_dat |>
+  ggplot(aes(x = PASz, y = eBMRQz, color = anhed)) +
+  geom_point() +
+  theme_minimal() +
+  geom_smooth(method = "lm")
+
+
+# Created varaible of anhedonia without tool creates artificial mediator variable that knows everything about upstread 
+
+# if add musical anhedonia varible to model, doesnt even make sense since eBMRQ and PAS have all informaiton, why not model it that way. 
+
+# once learn about Z (artifical cut points), dont need anything more about X (measuremnts)
+
+### stratify by mediator if ONLY intersted in direct effect of plant 
+
+# if stratify by treatement after experiment, dont put it in
+# consequences of treatement itself should not be in estimator!!!! 
+
+# stratify by consequence of treatment -- fungus in this case 
+
+# no common cause? 
+
+# A is caused by eBMRQ and PAS 
+# X and Y are not related because they don't share a common cause ! (in this case, trying to argue that musical anhedonia is distinct )
+
+# crazy 
+
+causal_effect_ples <- 0.2
+kath_dat$pleas_anhed <- causal_effect_ples * kath_dat$PASz + kath_dat$unobserved
+
+model_1 <- lm(pleas_anhed ~ anhed, data = kath_dat)
+
+summary(model_1)
+
+# everything that is known about A come from eBMRQ and PAS?? 
+
+
+
+# check each separate, then as composite 
+
+# pas 
+kath_dat$pleas_pas <- causal_effect_ples * kath_dat$PASz + kath_dat$unobserved
+# bMRQ
+kath_dat$pleas_bmrq <- causal_effect_ples * kath_dat$eBMRQ + kath_dat$unobserved
+
+
+
+
+
+# just general effect of pleasentness with pleasing stimuli 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+eBMRQ <- rnorm(n_samples, mean = 91.32, sd = 21.84)
+PAS <- rnorm(n_samples, mean = 9.86, sd = 2.53)
+
+
+kath_dat
+
+
+
+
+
+
+
+eBMRQ_g <- rgamma(n_samples, shape = 5, rate = .1) + 90 
+
+mean(eBMRQ_g)
+sd(eBMRQ_g)
+
+
+
+PAS_g <- rgamma(n_samples, mean = 9.86, sd = 2.53)
+
+  
+
+
+plot(xydf$PAS, xydf$eBMRQ)
+
+
+
+mean(eBMRQ)
+
+
+
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
